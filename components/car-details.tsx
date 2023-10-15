@@ -4,6 +4,7 @@ import { ICarDetailsProps } from '@/types';
 import Image from 'next/image';
 import { Fragment } from 'react';
 import { Dialog, Transition } from '@headlessui/react';
+import { generateCarImageUrl } from '@/utils';
 
 function CarDetails({ isOpen, closeModal, car }: ICarDetailsProps) {
 	return (
@@ -49,7 +50,7 @@ function CarDetails({ isOpen, closeModal, car }: ICarDetailsProps) {
 									<div className="flex-1 flex flex-col gap-3">
 										<div className="relative w-full h-40 bg-pattern bg-cover bg-center rounded-lg">
 											<Image
-												src="/hero.png"
+												src={generateCarImageUrl(car)}
 												alt="car model"
 												fill
 												priority
@@ -59,7 +60,7 @@ function CarDetails({ isOpen, closeModal, car }: ICarDetailsProps) {
 										<div className="flex gap-3">
 											<div className="flex-1 relative w-ful h-24 bg-primary-blue-100 rounded-lg">
 												<Image
-													src="/hero.png"
+													src={generateCarImageUrl(car, '29')}
 													alt="car model"
 													fill
 													priority
@@ -68,7 +69,7 @@ function CarDetails({ isOpen, closeModal, car }: ICarDetailsProps) {
 											</div>
 											<div className="flex-1 relative w-ful h-24 bg-primary-blue-100 rounded-lg">
 												<Image
-													src="/hero.png"
+													src={generateCarImageUrl(car, '33')}
 													alt="car model"
 													fill
 													priority
@@ -77,7 +78,7 @@ function CarDetails({ isOpen, closeModal, car }: ICarDetailsProps) {
 											</div>
 											<div className="flex-1 relative w-ful h-24 bg-primary-blue-100 rounded-lg">
 												<Image
-													src="/hero.png"
+													src={generateCarImageUrl(car, '13')}
 													alt="car model"
 													fill
 													priority
