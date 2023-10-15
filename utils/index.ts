@@ -5,7 +5,7 @@ export async function fetchCars() {
 	};
 
 	const resp = await fetch(
-		'https://cars-by-api-ninjas.p.rapidapi.com/v1/cars?model=camry',
+		'https://cars-by-api-ninjas.p.rapidapi.com/v1/cars?model=carrera',
 		{ headers: headers },
 	);
 

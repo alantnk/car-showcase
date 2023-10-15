@@ -72,7 +72,12 @@ function CarCard({ car }: TProps) {
 					/>
 				</div>
 			</div>
-			{/* <CarDetails isOpen={isOpen} closeModal={() =setIsOpen(false)} car={car} /> */}
+			{/* TODO: CarDetails Modal */}
+			<CarDetails
+				isOpen={isOpen}
+				closeModal={() => setIsOpen(false)}
+				car={car}
+			/>
 		</div>
 	);
 }
