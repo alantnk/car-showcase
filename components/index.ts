@@ -5,6 +5,8 @@ import Footer from './footer';
 import CustomFilter from './custom-filter';
 import Searchbar from './searchbar';
 import SearchManufacturer from './search-manufacturer';
+import CarCard from './car-card';
+import CarDetails from './car-details';
 
 export {
 	Hero,
@@ -14,4 +16,6 @@ export {
 	CustomFilter,
 	Searchbar,
 	SearchManufacturer,
+	CarCard,
+	CarDetails,
 };
