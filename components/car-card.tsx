@@ -22,9 +22,9 @@ function CarCard({ car }: TProps) {
 				</h2>
 			</div>
 			<p className="flex mt-6 text-[32px] font-extrabold">
-				<span className="self-start text-[14px] font-semibold">$</span>
+				<span className="self-start text-[14px] font-semibold">R$</span>
 				{carRent}
-				<span className="self-end text-[14px] font-medium">/day</span>
+				<span className="self-end text-[14px] font-medium">/dia</span>
 			</p>
 			<div className="relative w-full h-40 my-3 object-contain">
 				<Image
