@@ -54,6 +54,10 @@ export interface ICustomFilterProps {
 	options: IOptionProps[];
 }
 
+export interface IHomeProps {
+	searchParams: IFilterProps;
+}
+
 export interface IShowMoreProps {
 	pageNumber: number;
 	isNext: boolean;

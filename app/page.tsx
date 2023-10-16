@@ -1,8 +1,9 @@
 import { CarCard, CustomFilter, Hero, Searchbar, ShowMore } from '@/components';
 import { fetchCars } from '@/utils';
 import { fuels, yearsOfProduction } from '@/constants';
+import { IHomeProps } from '@/types';
 
-export default async function Home({ searchParams }) {
+export default async function Home({ searchParams }: IHomeProps) {
 	const allCars = await fetchCars({
 		manufacturer: searchParams.manufacturer || '',
 		model: searchParams.model || '',
@@ -16,8 +17,8 @@ export default async function Home({ searchParams }) {
 			<Hero />
 			<div className="mt-12 padding-x padding-y max-width" id="discover">
 				<div className="home__text-container">
-					<h1 className="text-4xl font-extrabold">Car Catalogue</h1>
-					<p>Explore the cars you might like</p>
+					<h1 className="text-4xl font-extrabold">Catálogo de Carros</h1>
+					<p>Descubra os carros que podem ser do seu interesse</p>
 				</div>
 				<div className="home__filters">
 					<Searchbar />
@@ -40,7 +41,9 @@ export default async function Home({ searchParams }) {
 					</section>
 				) : (
 					<div className="home__error-container">
-						<h2 className="text-black text-xl font-bold">Oops, no results</h2>
+						<h2 className="text-black text-xl font-bold">
+							Ops, sem resultados
+						</h2>
 						<p>{allCars?.message}</p>
 					</div>
 				)}

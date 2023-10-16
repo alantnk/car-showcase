@@ -45,7 +45,7 @@ function CarCard({ car }: TProps) {
 							alt="steering wheel"
 						/>
 						<p className="text-[14px]">
-							{transmission === 'a' ? 'Automatic' : 'Manual'}
+							{transmission === 'a' ? 'Automático' : 'Manual'}
 						</p>
 					</div>
 					<div className="flex flex-col justify-center items-center gap-2">
@@ -59,12 +59,12 @@ function CarCard({ car }: TProps) {
 					</div>
 					<div className="flex flex-col justify-center items-center gap-2">
 						<Image src="/gas.svg" width={20} height={20} alt="steering wheel" />
-						<p className="text-[14px]">{city_mpg} MPG</p>
+						<p className="text-[14px]">{city_mpg} KM/L</p>
 					</div>
 				</div>
 				<div className="car-card__btn-container">
 					<CustomButton
-						title="View more"
+						title="Ver mais"
 						containerStyles="w-full py-[16px] rounded-full bg-primary-blue"
 						textStyles="text-white text-[14px] leading-[17px] font-bold"
 						rightIcon="/right-arrow.svg"

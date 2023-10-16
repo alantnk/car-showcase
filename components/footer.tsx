@@ -17,7 +17,7 @@ function Footer() {
 					/>
 					<p className="text-base text-gray-700">
 						Carhub {currentYear} <br />
-						All Rights Reserved &copy;
+						Todos os direitos reservados &copy;
 					</p>
 				</div>
 
@@ -42,14 +42,24 @@ function Footer() {
 			</div>
 
 			<div className="flex justify-between items-center flex-wrap mt-10 border-t border-gray-100 sm:px-16 px-6 py-10">
-				<p>@{currentYear} CarHub. All rights reserved</p>
-
+				<p>@{currentYear} CarHub. Todos os direitos reservados</p>
+				<div className="source">
+					<a href="https://github.com/alant2031">
+						<Image
+							src="/github.png"
+							alt="github"
+							width={20}
+							height={20}
+							className="object-contain"
+						/>
+					</a>
+				</div>
 				<div className="footer__copyrights-link">
 					<Link href="/" className="text-gray-500">
-						Privacy & Policy
+						Privacidade e Política
 					</Link>
 					<Link href="/" className="text-gray-500">
-						Terms & Condition
+						Termos e Condições
 					</Link>
 				</div>
 			</div>
