@@ -4,14 +4,14 @@ import { Fragment, useState } from 'react';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { Listbox, Transition } from '@headlessui/react';
-import { ICustomFilterProps } from '@/types';
+import { ICustomFilterProps, IOptionProps } from '@/types';
 import { updateSearchParams } from '@/utils';
 
 function CustomFilter({ title, options }: ICustomFilterProps) {
 	const [selected, setSelected] = useState(options[0]);
 	const router = useRouter();
 
-	const handleUpdateParams = (e: { type: string; value: string }) => {
+	const handleUpdateParams = (e: IOptionProps) => {
 		const newPathname = updateSearchParams(title, e.value.toLowerCase());
 		router.push(newPathname);
 	};

@@ -53,3 +53,8 @@ export interface ICustomFilterProps {
 	title: string;
 	options: IOptionProps[];
 }
+
+export interface IShowMoreProps {
+	pageNumber: number;
+	isNext: boolean;
+}
