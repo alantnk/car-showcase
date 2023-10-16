@@ -2,19 +2,11 @@
 
 import { Fragment, useState } from 'react';
 import Image from 'next/image';
-import { useRouter } from 'next/navigation';
 import { Listbox, Transition } from '@headlessui/react';
-import { ICustomFilterProps, IOptionProps } from '@/types';
-import { updateSearchParams } from '@/utils';
+import { ICustomFilterProps } from '@/types';
 
-function CustomFilter({ title, options }: ICustomFilterProps) {
+function CustomFilter({ options, setFilter }: ICustomFilterProps) {
 	const [selected, setSelected] = useState(options[0]);
-	const router = useRouter();
-
-	const handleUpdateParams = (e: IOptionProps) => {
-		const newPathname = updateSearchParams(title, e.value.toLowerCase());
-		router.push(newPathname);
-	};
 
 	return (
 		<div className="w-fit">
@@ -22,7 +14,7 @@ function CustomFilter({ title, options }: ICustomFilterProps) {
 				value={selected}
 				onChange={(e) => {
 					setSelected(e);
-					handleUpdateParams(e);
+					setFilter(e.value);
 				}}
 			>
 				<div className="relative w-fit z-10">

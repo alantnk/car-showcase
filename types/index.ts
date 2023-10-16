@@ -1,4 +1,4 @@
-import { MouseEventHandler } from 'react';
+import { Dispatch, MouseEventHandler, SetStateAction } from 'react';
 
 export interface ICustomButtonProps {
 	title: string;
@@ -11,8 +11,8 @@ export interface ICustomButtonProps {
 }
 
 export interface ISearchManufacturerProps {
-	manufacturer: string;
-	setManufacturer(m: string): void;
+	selected: string;
+	setSelected(param: string): void;
 }
 
 export interface ICarProps {
@@ -48,13 +48,21 @@ export interface IOptionProps {
 	title: string;
 	value: string;
 }
+export type NumberOrString = number | string;
 
 export interface ICustomFilterProps {
 	title: string;
 	options: IOptionProps[];
+	setFilter: Dispatch<SetStateAction<NumberOrString>>;
 }
 
 export interface IShowMoreProps {
 	pageNumber: number;
 	isNext: boolean;
+	setLimit: (param: number) => void;
+}
+
+export interface ISearchBarProps {
+	setManufacturer: (param: string) => void;
+	setModel: (param: string) => void;
 }
