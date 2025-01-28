@@ -44,7 +44,7 @@ function Footer() {
 			<div className="flex justify-between items-center flex-wrap mt-10 border-t border-gray-100 sm:px-16 px-6 py-10">
 				<p>@{currentYear} CarHub. Todos os direitos reservados</p>
 				<div className="source">
-					<a href="https://github.com/alant2031">
+					<a href="https://github.com/alant4k">
 						<Image
 							src="/github.png"
 							alt="github"
